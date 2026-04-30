@@ -22,15 +22,6 @@ async function startServer() {
 
   app.use(express.json());
 
-  app.use((req, res, next) => {
-    if (req.path.startsWith("/api") || req.path.startsWith("/socket.io")) {
-      return next();
-    }
-
-  const newUrl = "https://vortex-telemetry-hub.europe-west2.run.app" + req.originalUrl;
-  return res.redirect(301, newUrl);
-  });
-
   // Simulation State
   let metrics = {
     throughput: 0,
