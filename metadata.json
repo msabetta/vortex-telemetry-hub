@@ -1,0 +1,6 @@
+{
+  "name": "Vortex Telemetry Hub",
+  "description": "High-throughput IoT data ingestion dashboard simulating a Kafka-Flink-Ozone pipeline with real-time metrics and AI anomaly detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
