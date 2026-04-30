@@ -71,6 +71,11 @@ async function startServer() {
     res.json({ status: "ok", engine: "Vortex v1.0.0" });
   });
 
+  app.use((req, res) => {
+    const newUrl = "https://vortex-telemetry-hub.europe-west2.run.app" + req.originalUrl;
+    return res.redirect(301, newUrl);
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
