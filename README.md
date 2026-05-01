@@ -126,6 +126,14 @@ export GEMINI_API_KEY=your_key
 docker-compose up --build
 ```
 
+### Netlify Deployment
+
+Note: As Netlify is a serverless platform, persistent WebSockets (Socket.io) are not natively supported. To deploy the frontend:
+1. Connect your repo to Netlify.
+2. Set Build Command: `npm run build`.
+3. Set Publish Directory: `dist`.
+4. Add `GEMINI_API_KEY` to Site Environment Variables.
+
 ---
 
 ## 🧪 Running Tests
